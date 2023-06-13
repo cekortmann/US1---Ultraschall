@@ -1,10 +1,10 @@
-all: build/v203.pdf
+all: build/US1.pdf
 
-build/v203.pdf: v203.tex aufbau.tex auswertung.tex diskussion.tex durchfuehrung.tex fehlerrechnung.tex lit.bib theorie.tex ziel.tex | build
-	lualatex  --output-directory=build v206.tex
-	lualatex  --output-directory=build v206.tex
-	biber build/v206.bcf
-	lualatex  --output-directory=build v206.tex
+build/US1.pdf: US1.tex aufbau.tex auswertung.tex diskussion.tex durchfuehrung.tex fehlerrechnung.tex lit.bib theorie.tex ziel.tex | build
+	lualatex  --output-directory=build US1.tex
+	lualatex  --output-directory=build US1.tex
+	biber build/US1.bcf
+	lualatex  --output-directory=build US1.tex
 
 
 build: 
