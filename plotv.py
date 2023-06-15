@@ -23,7 +23,7 @@ fa, fb = pcov
 ua = ufloat(a, fa) 
 ub = ufloat(b, fb)
 
-xx= np.linspace(0,50,1000)
+xx= np.linspace(0,25,1000)
 
 
 print('ua',ua)

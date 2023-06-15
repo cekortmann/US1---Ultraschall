@@ -1,7 +1,8 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\label{s:Auswertung}
 
 \input{fehlerrechnung.tex}
+\subsection{Bestimmung der Schallgeschwindigkeit und der Dicke der Anpassungsschicht}
 Die Abmessungen der einzelnen Bohrungen befinden sich in \autoref{tab:block}. Die Nummerierung der Bohrungen befinden sich in \autoref{fig:acryl}.
 \begin{table}
     \centering 
@@ -31,10 +32,10 @@ sich in \autoref{tab:geschw}.
 
 \begin{table}
     \centering 
-    \caption{Messwerte der Laufzeit der einzelnen Bohrungen}
+    \caption{Messwerte der Laufzeiten der einzelnen Bohrungen}
 \begin{tabular}{c c}
     \toprule
-    Bohrung & Laufzeit $t$ in \unit{\micro\sec}\\
+    Bohrung & Laufzeit $t$ in \unit{\micro\s}\\
     \midrule
     3&45.4 \\
       4&39.9 \\
@@ -59,27 +60,28 @@ durchlaufen wird) und eine Ausgleichsgerade gebildet. Diese befinden sich in \au
 
 Die Schichtdicke entspricht dem Betrag des y-Achsenabschnitt
 \begin{equation*}
-    d = \lvert b\rvert = \lvert (-1.1 \pm 0.4) \, \unit{\mm}\rvert =  (1.1 \pm 0.4) \, \unit{\mm} \& .
+    d = \lvert b\rvert = \lvert (-1.1 \pm 0.4) \, \unit{\mm}\rvert =  (1.1 \pm 0.4) \, \unit{\mm} \; .
 \end{equation*}
 Die Schallgeschwindigkeit in Acryl ergibt sich über die Steigung der Ausgleichsgeraden
 \begin{equation*}
-    v = (2.718 \pm 0.025) \, \unit{\mm \per \micro\sec} = (2718\pm 25) \, \unit{\m\per\sec} \; .
+    v = (2.718 \pm 0.025) \, \unit{\mm \per \micro\s} = (2718\pm 25) \, \unit{\m\per\s} \; .
 \end{equation*}
 
-\subsection{Untersuchung des Acrylblocks}
+\subsection{Untersuchung des Acrylblocks mit einem A-Scan}
 Die Messwerte des A-Scans von der oberen und unteren Seite des Acrylblocks befinden sich in \autoref{tab:AScan}. Dabei wurden die Tiefenmessungen 
 mit der Schichtdicke korrigiert. Mithilfe der korrigierten Werte und der gemessenen Gesamthöhe des Blocks $h = 79.9\,\unit{\mm}$ ergibt sich über 
 \begin{equation*}
     d = h - a_{\symup{ob}} - a_{\symup{unt}}
 \end{equation*}
-der Durchmesser der einzelnen Bohrungen, welcher ebenfalls in \autoref{tab:AScan} dargestllt ist.
+der Durchmesser der einzelnen Bohrungen, welcher ebenfalls in \autoref{tab:AScan} dargestellt ist.
 
 \begin{table}
     \centering 
     \caption{Messwerte der Tiefe der einzelnen Bohrungen sowie dessen Durchmesser.}
-\begin{tabular}{c c c c c c}
+\begin{tabular}{c | c c | c c | c}
     \toprule
-    Bohrung & Tiefe von oben in \unit{\mm} & Tiefe nach der Korrektur in \unit{\mm}& Tiefe von unten in \unit{\mm} & Tiefe nach der Korrektur in \unit{\mm} & Durchmesser d in \unit{\mm}\\
+    & \multicolumn{2}{c}{oben}& \multicolumn{2}{c}{unten} & \\
+    Bohrung & Tiefe \/\unit{\mm} &  nach Korrektur \/\unit{\mm}& Tiefe \/ \unit{\mm} & nach Korrektur \/ \unit{\mm} & d \/ \unit{\mm}\\
     \midrule
                         1&20.6&19.5&60.4&59.3&1.1 \\
                          2&19.0&17.9&62.0&60.9&1.1 \\
@@ -90,9 +92,35 @@ der Durchmesser der einzelnen Bohrungen, welcher ebenfalls in \autoref{tab:AScan
                          7&31.4&30.3&47.9&46.8&2.8 \\
                          8&23.3&22.2&56.0&54.9&2.8 \\
                          9&15.2&14.1&64.1&63.0&2.8 \\
-                                     10&7.2&6.1&&& \\
+                        10&7.2&6.1&--&--& \\
                         11&55.8&54.7&16.8&15.7&9.5 \\
                         \bottomrule
     \end{tabular}
     \label{tab:AScan}
 \end{table}
+
+Die zehnte Bohrung konnte von unten nicht gemessen werden, da die elfte Bohrung direkt davor liegt und nicht genug Ultraschallwellen zu der zehnten Bohrung 
+transmittiert werden, sodass diese messbar wäre.
+
+\subsection{Untersuchung des Auflösungsvermögens}
+Hier wurden die Bohrungen eins und zwei mit einem A-Scan untersucht. Dabei werden die Untersuchungen mit einer 1-MHz-Sonde und einer 2-MHz-Sonde miteinander
+verglichen. Die Graphik der 1-MHz-Sonde befindet sich in \autoref{fig:1son} und die der 2-MHz-Sonde in \autoref{fig:2son}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height = 4cm]{1MHz.pdf}
+    \caption{Graphik der 1-MHz-Sonde.}
+    \label{fig:1son}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[height = 4cm]{2Mhz.pdf}
+    \caption{Graphik der 2-MHz-Sonde.}
+    \label{fig:2son}
+\end{figure}
+
+Wenn die beiden Peaks ungefähr auf der Höhe von $20\,\unit{\mm}$ der beiden Graphiken miteinander verglichen werden, wird festgestellt, dass die 2-MHz-Sonde 
+ein höheres Auflösungsvermögen hat. Dies erkennt man daran, dass die Peaks bei der 1-MHz-Sonde undeutlich und schwieriger abzulesen sind.
+
+\subsection{Untersuchung des Acrylblocks mit einem B-Scan}
