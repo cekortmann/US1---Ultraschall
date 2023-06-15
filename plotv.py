@@ -16,20 +16,20 @@ n, aun, aob, d = np.genfromtxt('block.txt', unpack= True, skip_header=3, skip_fo
 def g(x,a,b):
     return a*x+b
 
-para,pcov =curve_fit(g,t,aob)#,p0=[1,mean,sigma])
+para,pcov =curve_fit(g,0.5*t,aob)#,p0=[1,mean,sigma])
 a,b = para
 pcov = np.sqrt(np.diag(pcov))
 fa, fb = pcov
 ua = ufloat(a, fa) 
 ub = ufloat(b, fb)
 
-xx= np.linspace(0,9,100)
+xx= np.linspace(0,50,1000)
 
 
 print('ua',ua)
 print('ub',ub)
 plt.plot(xx, g(xx, *para), 'orange', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
-plt.plot(t, aob, 'xb', markersize=6 , label = 'Beschleunigung (V>0)', alpha=0.5)
+plt.plot(0.5*t, aob, 'xb', markersize=6 , label = 'Beschleunigung (V>0)', alpha=0.5)
 plt.xlabel(r'$t \, / \, \mathrm{\mu s}$')
 plt.ylabel(r'Abstand von oben$\mathrm{/} \mathrm{mm}$')
 plt.legend(loc="best")                  # legend position
