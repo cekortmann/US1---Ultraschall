@@ -1,3 +1,67 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+
+Der Mensch kann Töne in einem Frequenzbereich von etwa $16-20000\, \unit{\hertz}$ wahrnehmen. Der Bereich über der Hörschwelle wird 
+Ultraschall genannt.
+
+\subsection{Die Physik der Schallwelle}
+
+Der Schall ist eine longitudinale Well dessen Ausbreitung über die Gleichung
+\begin{equation*}
+    p(x,t)=p_0+v_0Zcos(\omega t-kx)
+\end{equation*}
+beschrieben werden kann. Die Größe $Z= c*\rho$ beschreibt hierbei die akustische Impedanz, welche durch die Dichte und die Schallgeschwindigkeit in dem
+Material beschrieben wird.
+Wie dem obenstehenden zu entnehmen ist, bereitet sich Schall in verschiedenen Medien mit unterschiedlichen Phasengeschwindigkeiten aus.
+In Flüssigkeiten und Gasen breitet sich der Schall stets longitudinal.
+Die Schallgeschwindigkeit kann so über 
+\begin{equation*}
+    c_{\text{Fl}}=\sqrt{\frac{1}{\kappa \cdot \rho}}
+\end{equation*}
+,wobei $\kappa$ die Kompressibilität des Mediums beschreibt, errechnet werden.
+Bei einem Festkörper hingegen verläuft die Ausbreitung nicht nur longitudinal, sondern kann auch Transversal vonstatten gehen.
+Die Formel
+\begin{equation*}
+    c_{\text{Fe}}=\sqrt{\frac{E}{\rho}}
+\end{equation*}
+beschriebt dient zur Berechnung der Schallgeschwindigkeit in festen Materialien.
+Wie bereits oben erwähnt, kann die Ausbreitungsrichtung in zwei Richtungen ablaufen, folglich ist auch deren Geschwindigkeit eine andere
+Schall verliert bei der Ausbreitung einen Teil der Energie durch Absorption.
+Die Abnahme der Intensität kann durch 
+\begin{equation*}
+    I(x)=I_0\cdot e^{\alpha x}
+\end{equation*}
+mit dem Absorptionskoeffizienten $\alpha$ beschrieben werden.
+Weiter wird Schall beim Auftreffen auf eine Grenzfläche teilweise reflektiert.
+Das Verhältnis von reflektierter zur eintreffenden Schallintensität wird Reflexionskoeffizient $R$ genannt
+\begin{equation*}
+    R=\left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2\, .
+\end{equation*}
+$Z_1$ steht hierbei für die akustische Impedanz des ersten Materials, analog für $Z_2$.
+Der transmittierte Anteil lässt sich über $T=1-R$ bestimmen.
+
+\subsection{Erzeugung von Ultraschall}
+\label{sec:Erzeugung}
+Die Erzeugung von Ultraschallwellen wird in diesem Versuch über den reziproken piezo-elektrischen Effekt erzeugt.
+Hierzu wird ein piezoelektrischer Kristall einem elektrischen Wechselfeld ausgesetzt.
+Der Kristall kann zum Schwingen angeregt werden, wenn einer seiner polaren Achsen auf in die Richtung des elektrischen Feldes liegt.
+Durch die Kraft auf die im Kristall befindlichen Ladungsträger verformt dieser sich leicht, sodass die Verformung mikroskopische Dipole erzeugt.
+Durch die oszillierende Richtung des Feldes beginnt auch die Verformung zu Schwingen.
+Hierbei wird Ultraschall emittiert. 
+Als Piezokristall dient häufig Quarz, welches aufgrund seiner gleichbleibenden physikalischen Eigenschaften kaum durch äußere Umstände beeinflusst wird, jedoch
+nur einen relativ schwachen piezoelektrischen Effekt hat.
+
+\subsection{Erklärung des Impuls-Echo-erfahrens}
+\label{sec:Impuls-Echo}
+Als Grundlage der anstehenden Messungen dient das sgn. Impuls-Echo-Verfahren.
+Hierbei dient der Ultraschallsender auch zeitgleich als Empfänger, welcher die von der Grenzfläche reflektierten Schallwellen aufnimmt, nachdem er diese ausgesendet hat. 
+Trifft der Ultraschall also auf Unebenheiten, Fremdkörper oder sonstige Änderungen der Materialeigenschaften, kann das verwendete Verfahren Aufschluss über dessen Größe geben. 
+Bei bekannter Schallgeschwindigkeit kann die Lage der Fehlstelle aus der Laufzeit $t$ bestimmt werden
+\begin{equation*}
+    s=\frac{1}{2}ct\, .
+\end{equation*}
+
+Die benötigten Messwerte werden über verschiedene Verfahren aufgenommen.
+Der A-Scan (Amplituden Scan) ist ein eindimensionales Verfahren bei dem die Echoamplituden gegen die Laufzeit aufgetragen wird. Beim B-Scan (Brightness Scan) wird durch Bewegen der Sonde ien zweidimensionales aufgenommen,
+auf welchem die Echoamplituden in Helligkeitsstufen dargestellt werden, sodass ein zweidimensionales Schnittbild erzeugt wird.
